@@ -26,7 +26,7 @@ enum {
 
 void dance_cln_finished (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
-    register_code (KC_BSPC);
+    register_code (KC_SPC);
   } else {
     register_code (KC_DEL);
   }
@@ -34,7 +34,7 @@ void dance_cln_finished (qk_tap_dance_state_t *state, void *user_data) {
 
 void dance_cln_reset (qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
-    unregister_code (KC_BSPC);
+    unregister_code (KC_SPC);
   } else {
     unregister_code (KC_DEL);
   }
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_ADPU ,KC_PGDN ,        KC_HOME ,KC_ADEN ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     KC_LGUI ,KC_PPLS ,KC_MINUS,KC_ALAS ,     KC_CTPL ,    TD_DEL  ,KC_SPC  ,        KC_SPC  ,KC_ENT  ,    KC_RALT ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT 
+     KC_LGUI ,KC_PPLS ,KC_MINUS,KC_ALAS ,     KC_CTPL ,    KC_BSPC ,TD_DEL  ,        KC_SPC  ,KC_ENT  ,    KC_RALT ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT 
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
